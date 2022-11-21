@@ -10,9 +10,7 @@ app.listen(5000, () => {
 });
 
 
-app.get('/', (req, res) => {
-    res.send('api is running..');
-});
+
 
 //function to get random index
 
@@ -24,7 +22,7 @@ function getRandomItem(arr) {
     return randomIndex;
 }
 
-app.get(`/random/jokes/joke/`, (req, res) => {
+app.get('/', (req, res) => {
     try {
         const joke_index = getRandomItem(jokes);
         const joker = jokes[joke_index];
